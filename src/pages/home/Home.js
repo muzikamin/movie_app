@@ -1,23 +1,35 @@
 import { useEffect, useState } from "react";
-import { nowPlaying } from "../../api";
+import { nowPlaying, popular, topRated, upRated } from "../../api";
 
 export const Home = () => {
   const [nowData, setNowData] = useState();
+  const [popData, setPopData] = useState();
+  const [topData, setTopData] = useState();
+  const [upData, setUpData] = useState();
 
   useEffect(() => {
     (async () => {
       try {
-        const { results } = await nowPlaying();
-        setNowData(results);
-        // 에러가 발생할 것 같은 것을 넣어주고
+        const { results: nowResult } = await nowPlaying();
+        // => 비구조 할당시 이름이 중복될 땐 상위와 같이 이름을 변경할 수 있음
+        const { results: popResult } = await popular();
+        const { results: topResult } = await topRated();
+        const { results: upResult } = await upRated();
+
+        setNowData(nowResult);
+        setPopData(popResult);
+        setTopData(topResult);
+        setUpData(upResult);
       } catch (error) {
         console.log(error);
-        // 실제 에러가 났을 때 유저에게 표시할 내용을 넣어주기
+        alert("알 수 없는 에러가 발생했습니다");
       }
     })();
   }, []);
 
-  console.log(nowData);
+  // console.log(nowData);
+  // console.log(topData);
+  // console.log(topData);
 
   return <div>Home</div>;
 };
