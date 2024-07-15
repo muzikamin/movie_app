@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { nowPlaying, popular, topRated, upRated } from "../../api";
+import { Loading } from "../../components/Loading";
 
 export const Home = () => {
   const [nowData, setNowData] = useState();
   const [popData, setPopData] = useState();
   const [topData, setTopData] = useState();
   const [upData, setUpData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -20,6 +22,7 @@ export const Home = () => {
         setPopData(popResult);
         setTopData(topResult);
         setUpData(upResult);
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
         alert("알 수 없는 에러가 발생했습니다");
@@ -29,9 +32,10 @@ export const Home = () => {
 
   // console.log(nowData);
   // console.log(topData);
-  // console.log(topData);
+  console.log(topData);
+  console.log(isLoading);
 
-  return <div>Home</div>;
+  return <>{isLoading ? <Loading /> : "HOME"}</>;
 };
 
 // *예외
