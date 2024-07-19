@@ -8,20 +8,37 @@ import { useParams } from "react-router-dom";
 const Container = styled.div`
   padding: 150px 20%;
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    padding: 150px 10%;
+  }
 `;
 
 const CoverImg = styled.img`
   width: 45%;
   margin-right: 5%;
+  object-fit: cover;
+
+  @media screen and (max-width: 768px) {
+    width: 40%;
+  }
 `;
 
 const ConWrap = styled.div`
   width: 40%;
 
+  @media screen and (max-width: 768px) {
+    width: 60%;
+  }
+
   h3 {
     font-size: 70px;
     font-weight: 700;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 `;
 
@@ -34,6 +51,13 @@ const Info = styled.div`
     font-size: 18px;
     font-weight: 400;
     margin-right: 15px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 15px;
+      text-align: center;
+    }
   }
 
   display: flex;
@@ -45,6 +69,11 @@ const Genres = styled.ul`
   margin-left: 20px;
   font-size: 18px;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+
   li {
     margin-top: 10px;
   }
@@ -56,6 +85,12 @@ const Desc = styled.div`
   opacity: 0.7;
   margin-top: 100px;
   line-height: 30px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 40px;
+  }
 `;
 
 export const Detail = () => {
