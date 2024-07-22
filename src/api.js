@@ -28,6 +28,11 @@ export const upRated = () =>
   fetch(url("movie/upcoming"), options).then((res) => res.json());
 
 // 상세페이지 요청
-
 export const movieDetail = (movie_id) =>
   fetch(url(`movie/${movie_id}`), options).then((res) => res.json());
+
+// 검색 요청
+export const searchMovie = (keyword) => {
+  const searchUrl = baseUrl + `search/movie?query=${keyword}&language=ko-kr`;
+  return fetch(searchUrl, options).then((res) => res.json());
+};
