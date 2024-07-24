@@ -112,9 +112,10 @@ export const Detail = () => {
         console.log(error);
       }
     })();
-  }, []);
+  }, [movieId]);
 
   // console.log(detailData);
+  // useeffect를 사용할 때 useparams, loaction 등 url에 관련된 훅을 사용한다면 관련 내용을 넣어줘야함
 
   return (
     <div>

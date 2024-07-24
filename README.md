@@ -7,8 +7,8 @@
 - [x] Loading 컴포넌트 구성
 - [x] 웹폰트 설정
 - [x] 각 페이지 UI 구성과 반응형
-- [] Header scroll Event
-- [] Helmet
+- [x] Header scroll Event
+- [x] Helmet
 - [] Deploy
 
 ## 설치 항목
