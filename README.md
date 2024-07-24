@@ -6,18 +6,18 @@
 - [x] Header, Footer 컴포넌트 구성
 - [x] Loading 컴포넌트 구성
 - [x] 웹폰트 설정
-- [] 각 페이지 UI 구성과 반응형
-- [] Header scroll Even
+- [x] 각 페이지 UI 구성과 반응형
+- [] Header scroll Event
 - [] Helmet
 - [] Deploy
 
 ## 설치 항목
 
-- [] react-router-dom
-- [] styled-components
-- [] styled-reset
-- [] swiper
-- [] font-awesome
-- [] react-hook-form
-- [] helmet-async
-- [] react-icons
+- [x] react-router-dom
+- [x] styled-components
+- [x] styled-reset
+- [x] swiper
+- [x] font-awesome
+- [x] react-hook-form
+- [x] helmet-async
+- [x] react-icons
